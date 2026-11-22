@@ -37,11 +37,15 @@ Switchyard needs `git` for its worktrees anyway. With Codex hooks installed, Cod
 Switchyard may warn that it can't find `switchyard`, since Switchyard isn't on your `PATH`; the
 hook does nothing there in any case.
 
-**Updates.** When a new release is out, the sidebar offers **Update to …**: Switchyard downloads
-it, checks its signature, installs it (on Linux your system asks for your password) and restarts.
-Your sessions keep running, since the daemon stays on its old build; it moves to the new one by
-itself once they have all ended, or when you choose **Restart daemon to finish updating**. A source
-install isn't updated this way, nor is the Arch package; the sidebar links to the release instead.
+**Updates.** When a new release is out, Switchyard downloads it and checks its signature in the
+background, then a card in the bottom-right corner offers **Restart to update**. With **Install
+updates automatically** on (Settings › Updates; on unless you turn it off), it also installs by
+itself once the app has had no input for a few minutes and nothing on screen is unsaved, and
+restarts. On Linux your system asks for your password to install it; turn that away and the
+release waits for your click. Your sessions keep running, since the daemon stays on its old build;
+it moves to the new one by itself once they have all ended, or when you choose **Restart daemon to
+finish updating**. A source install isn't updated this way, nor is the Arch package; the card
+links to the release instead.
 
 **Just the daemon, on another host.** Each release also carries `switchyard` on its own for each
 host it can run on, beside a `.sig` signed with the updater's key:
